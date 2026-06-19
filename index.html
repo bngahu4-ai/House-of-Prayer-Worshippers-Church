@@ -1,0 +1,1628 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>House of Prayer Worshippers Church</title>
+
+<style>
+html,
+body{
+    margin:0;
+    padding:0;
+    overflow-x:hidden;
+}
+html{
+    scroll-behavior:smooth;
+}
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:#ffffff;
+    color:#222;
+}
+
+/* HEADER */
+header{
+    background:#ffffff;
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:15px 8%;
+    box-shadow:0 2px 10px rgba(0,0,0,0.08);
+    position:fixed;
+    width:100%;
+    top:0;
+    z-index:1000;
+}
+
+.logo-area{
+    display:flex;
+    align-items:center;
+    gap:12px;
+}
+
+.logo{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    background:linear-gradient(135deg,#0A3D91,#5A2D82);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    color:#fff;
+    font-size:24px;
+    font-weight:bold;
+}
+
+.logo-text h2{
+    color:#0A3D91;
+    font-size:1.3rem;
+}
+
+.logo-text p{
+    color:#D4AF37;
+    font-size:0.85rem;
+}
+.logo-img{
+    width:60px;
+    height:60px;
+    object-fit:contain;
+}
+
+nav ul{
+    display:flex;
+    list-style:none;
+}
+
+nav ul li{
+    margin-left:25px;
+}
+
+nav ul li a{
+    text-decoration:none;
+    color:#0A3D91;
+    font-weight:600;
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+    color:#D4AF37;
+}
+
+/* HERO SECTION */
+.hero{
+    min-height:100vh;
+    background:
+    linear-gradient(
+        rgba(10,61,145,0.85),
+        rgba(90,45,130,0.85)
+    ),
+    url('https://images.unsplash.com/photo-1519491050282-cf00c82424b4?auto=format&fit=crop&w=1500&q=80');
+    background-size:cover;
+    background-position:center;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-align:center;
+    color:white;
+    padding:120px 20px 50px;
+}
+
+.hero-content{
+    max-width:900px;
+}
+
+.hero h4{
+    letter-spacing:4px;
+    margin-bottom:15px;
+    color:#D4AF37;
+}
+
+.hero h1{
+    font-size:4rem;
+    margin-bottom:20px;
+    line-height:1.2;
+}
+
+.motto{
+    font-size:1.4rem;
+    color:#FFD700;
+    margin-bottom:25px;
+    font-style:italic;
+}
+
+.hero p{
+    font-size:1.1rem;
+    line-height:1.8;
+    margin-bottom:35px;
+}
+
+.buttons{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+}
+
+.btn{
+    text-decoration:none;
+    padding:14px 28px;
+    border-radius:5px;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.btn-primary{
+    background:#D4AF37;
+    color:#0A3D91;
+}
+
+.btn-primary:hover{
+    transform:translateY(-3px);
+}
+
+.btn-secondary{
+    border:2px solid white;
+    color:white;
+}
+
+.btn-secondary:hover{
+    background:white;
+    color:#0A3D91;
+}
+
+/* RESPONSIVE */
+@media(max-width:900px){
+
+header{
+    flex-direction:column;
+    gap:15px;
+}
+
+.hero h1{
+    font-size:2.5rem;
+}
+
+.logo-text h2{
+    font-size:1rem;
+}
+
+nav ul{
+    flex-wrap:wrap;
+    justify-content:center;
+}
+
+nav ul li{
+    margin:8px;
+}
+}
+/* GENERAL SECTION HEADER */
+
+.section-header{
+    text-align:center;
+    margin-bottom:60px;
+}
+
+.section-header span{
+    color:#D4AF37;
+    font-weight:bold;
+    letter-spacing:2px;
+}
+
+.section-header h2{
+    color:#0A3D91;
+    margin-top:10px;
+    font-size:2.3rem;
+}
+
+/* ABOUT */
+
+.about{
+    padding:100px 8%;
+    background:#fff;
+}
+
+.about-content{
+    display:flex;
+    gap:50px;
+    align-items:center;
+    flex-wrap:wrap;
+}
+
+.about-text{
+    flex:1;
+    min-width:300px;
+}
+
+.about-text p{
+    margin-bottom:20px;
+    line-height:1.9;
+    font-size:1.05rem;
+}
+
+.learn-more-btn{
+    display:inline-block;
+    background:#0A3D91;
+    color:white;
+    padding:12px 24px;
+    text-decoration:none;
+    border-radius:5px;
+    margin-top:10px;
+}
+
+.learn-more-btn:hover{
+    background:#5A2D82;
+}
+
+.about-image{
+    flex:1;
+    min-width:300px;
+}
+
+.about-image img{
+    width:100%;
+    border-radius:15px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+/* VISION MISSION */
+
+.vision-mission{
+    padding:100px 8%;
+    background:#f7f8fc;
+}
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(320px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:white;
+    padding:40px;
+    border-radius:15px;
+    text-align:center;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.card:hover{
+    transform:translateY(-8px);
+}
+
+.icon{
+    font-size:50px;
+    margin-bottom:20px;
+}
+
+.card h3{
+    color:#0A3D91;
+    margin-bottom:15px;
+}
+
+.card p{
+    line-height:1.8;
+}
+/* HISTORY SECTION */
+
+.history{
+    padding:100px 8%;
+    background:#ffffff;
+}
+
+.history-content{
+    max-width:900px;
+    margin:auto;
+    text-align:center;
+}
+
+.history-content p{
+    font-size:1.1rem;
+    line-height:1.9;
+    margin-bottom:25px;
+    color:#444;
+}
+/* BRANCHES SECTION */
+
+.branches{
+    padding:100px 8%;
+    background:#f7f8fc;
+}
+
+.section-description{
+    max-width:800px;
+    margin:20px auto 0;
+    text-align:center;
+    line-height:1.8;
+    color:#666;
+}
+
+/* HEADQUARTERS */
+
+.headquarters-card{
+    background:linear-gradient(135deg,#0A3D91,#5A2D82);
+    color:white;
+    padding:40px;
+    border-radius:20px;
+    margin-top:50px;
+    text-align:center;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.hq-badge{
+    display:inline-block;
+    background:#D4AF37;
+    color:#0A3D91;
+    padding:8px 18px;
+    border-radius:30px;
+    font-weight:bold;
+    margin-bottom:20px;
+}
+
+.headquarters-card h3{
+    font-size:2rem;
+    margin-bottom:15px;
+}
+
+.headquarters-card p{
+    max-width:800px;
+    margin:auto;
+    line-height:1.8;
+}
+
+.location{
+    margin-top:20px;
+    color:#FFD700;
+    font-weight:bold;
+}
+
+/* REGION CARDS */
+
+.regions-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.region-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+}
+
+.region-card:hover{
+    transform:translateY(-8px);
+}
+
+.region-card h3{
+    color:#0A3D91;
+    margin-bottom:20px;
+    padding-bottom:10px;
+    border-bottom:3px solid #D4AF37;
+}
+
+.region-card ul{
+    list-style:none;
+}
+
+.region-card ul li{
+    padding:10px 0;
+    border-bottom:1px solid #eee;
+    color:#555;
+}
+
+.region-card ul li:last-child{
+    border-bottom:none;
+}
+/* FOUNDER SECTION */
+
+.founder{
+    padding:100px 8%;
+    background:white;
+}
+
+.founder-container{
+    display:flex;
+    align-items:center;
+    gap:60px;
+    flex-wrap:wrap;
+}
+
+.founder-image{
+    flex:1;
+    min-width:300px;
+}
+
+.founder-image img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 10px 30px rgba(0,0,0,0.15);
+}
+
+.founder-content{
+    flex:1;
+    min-width:300px;
+}
+
+.founder-content h3{
+    color:#0A3D91;
+    font-size:2rem;
+    margin-bottom:10px;
+}
+
+.founder-content h4{
+    color:#D4AF37;
+    margin-bottom:25px;
+}
+
+.founder-content p{
+    line-height:1.9;
+    margin-bottom:20px;
+}
+
+.founder-content blockquote{
+    border-left:5px solid #D4AF37;
+    padding-left:20px;
+    margin:30px 0;
+    font-style:italic;
+    color:#5A2D82;
+    font-size:1.1rem;
+}
+
+.bishop-btn{
+    display:inline-block;
+    background:#0A3D91;
+    color:white;
+    padding:12px 25px;
+    text-decoration:none;
+    border-radius:5px;
+    transition:0.3s;
+}
+
+.bishop-btn:hover{
+    background:#5A2D82;
+}
+.leader-contact{
+    margin-top:15px;
+    color:#0A3D91;
+    font-weight:bold;
+}
+
+.leader-card p{
+    margin-bottom:8px;
+    line-height:1.6;
+}
+/* MINISTRIES SECTION */
+
+.ministries{
+    padding:100px 8%;
+    background:#ffffff;
+}
+
+.ministries-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.ministry-card{
+    background:white;
+    padding:35px;
+    text-align:center;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:4px solid #D4AF37;
+}
+
+.ministry-card:hover{
+    transform:translateY(-8px);
+}
+
+.ministry-icon{
+    font-size:3rem;
+    margin-bottom:20px;
+}
+
+.ministry-card h3{
+    color:#0A3D91;
+    margin-bottom:15px;
+}
+
+.ministry-card p{
+    line-height:1.8;
+    color:#555;
+}
+/* ==========================
+   EVENTS SECTION
+========================== */
+
+.events{
+    padding:100px 8%;
+    background:#f7f8fc;
+}
+
+.events-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.event-card{
+    background:white;
+    padding:35px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.08);
+    transition:0.3s;
+    border-top:5px solid #D4AF37;
+}
+
+.event-card:hover{
+    transform:translateY(-8px);
+}
+
+.event-card h3{
+    color:#0A3D91;
+    margin-bottom:15px;
+}
+
+.event-date{
+    color:#C62828;
+    font-weight:bold;
+    margin-bottom:15px;
+}
+
+.event-card p{
+    line-height:1.8;
+    color:#555;
+}
+
+/* ==========================
+   CONTACT SECTION
+========================== */
+
+.contact{
+    padding:100px 8%;
+    background:white;
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:50px;
+}
+
+.contact-info h2{
+    color:#0A3D91;
+    margin-bottom:20px;
+    font-size:2.2rem;
+}
+
+.contact-info p{
+    line-height:1.8;
+    margin-bottom:20px;
+    color:#555;
+}
+
+.contact-item{
+    margin-bottom:15px;
+    font-size:1rem;
+    color:#333;
+}
+
+.contact-item a{
+    color:#0A3D91;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.contact-form form{
+    display:flex;
+    flex-direction:column;
+    gap:15px;
+}
+
+.contact-form input,
+.contact-form select,
+.contact-form textarea{
+    padding:15px;
+    border:1px solid #ddd;
+    border-radius:8px;
+    font-size:1rem;
+    width:100%;
+}
+
+.contact-form input:focus,
+.contact-form select:focus,
+.contact-form textarea:focus{
+    outline:none;
+    border-color:#0A3D91;
+}
+
+.contact-form button{
+    background:#0A3D91;
+    color:white;
+    border:none;
+    padding:15px;
+    border-radius:8px;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:bold;
+    transition:0.3s;
+}
+
+.contact-form button:hover{
+    background:#5A2D82;
+}
+
+/* ==========================
+   SCRIPTURE BANNER
+========================== */
+
+.scripture{
+    background:linear-gradient(
+        135deg,
+        #0A3D91,
+        #5A2D82
+    );
+    color:white;
+    text-align:center;
+    padding:80px 10%;
+}
+
+.scripture p{
+    max-width:900px;
+    margin:auto;
+    font-size:1.3rem;
+    line-height:1.8;
+    font-style:italic;
+}
+
+.scripture span{
+    display:block;
+    margin-top:20px;
+    color:#D4AF37;
+    font-weight:bold;
+}
+
+/* ==========================
+   FOOTER
+========================== */
+
+footer{
+    background:#081224;
+    color:white;
+    text-align:center;
+    padding:35px 20px;
+    margin:0;
+}
+
+.footer-logo{
+    font-size:2rem;
+    font-weight:700;
+    color:#D4AF37;
+    margin-bottom:10px;
+}
+
+footer p{
+    margin:8px 0;
+    color:#ddd;
+    line-height:1.6;
+}
+/* ==========================
+   RESPONSIVE
+========================== */
+
+@media(max-width:768px){
+
+    .contact{
+        grid-template-columns:1fr;
+    }
+
+    .contact-info{
+        text-align:center;
+    }
+
+    .scripture p{
+        font-size:1.1rem;
+    }
+
+}
+.sermons{
+    padding:100px 8%;
+    background:#f7f8fc;
+}
+
+.sermon-grid{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+    gap:30px;
+    margin-top:50px;
+}
+
+.sermon-card{
+    background:white;
+    padding:30px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    border-top:4px solid #D4AF37;
+}
+
+.sermon-card h3{
+    color:#0A3D91;
+    margin-bottom:15px;
+}
+
+.sermon-card p{
+    line-height:1.8;
+}
+/* MOBILE MENU */
+
+.menu-toggle{
+    display:none;
+    font-size:32px;
+    cursor:pointer;
+    color:#0A3D91;
+}
+
+/* MOBILE */
+
+@media(max-width:900px){
+
+    header{
+        padding:15px 5%;
+    }
+
+    .menu-toggle{
+        display:block;
+    }
+
+    nav{
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:white;
+        display:none;
+        box-shadow:0 10px 20px rgba(0,0,0,.1);
+    }
+
+    nav.active{
+        display:block;
+    }
+
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+    }
+
+    nav ul li{
+        margin:12px 0;
+        text-align:center;
+    }
+
+    .logo-text h2{
+        font-size:1rem;
+    }
+
+    .logo-text p{
+        font-size:.75rem;
+    }
+}
+/* SOCIAL MEDIA SECTION */
+
+.social-media{
+    padding:100px 8%;
+    background:#ffffff;
+    text-align:center;
+}
+
+.social-media p{
+    max-width:700px;
+    margin:20px auto;
+    line-height:1.8;
+}
+
+.social-buttons{
+    margin-top:40px;
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.facebook-btn,
+.whatsapp-btn{
+    padding:15px 30px;
+    border-radius:8px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.facebook-btn{
+    background:#1877F2;
+    color:white;
+}
+
+.facebook-btn:hover{
+    transform:translateY(-3px);
+}
+
+.whatsapp-btn{
+    background:#25D366;
+    color:white;
+}
+
+.whatsapp-btn:hover{
+    transform:translateY(-3px);
+}
+/* FLOATING BUTTONS */
+
+.floating-buttons{
+    position:fixed;
+    right:20px;
+    bottom:20px;
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+    z-index:999;
+}
+
+.float-whatsapp,
+.float-facebook{
+    width:60px;
+    height:60px;
+    border-radius:50%;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    text-decoration:none;
+    font-size:28px;
+    color:white;
+    box-shadow:0 5px 15px rgba(0,0,0,.2);
+}
+
+.float-whatsapp{
+    background:#25D366;
+}
+
+.float-facebook{
+    background:#1877F2;
+}
+
+.float-whatsapp:hover,
+.float-facebook:hover{
+    transform:scale(1.1);
+}
+</style>
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo-area">
+        <img src="logo.png" alt="Church Logo" class="logo-img">
+
+        <div class="logo-text">
+            <h2>House of Prayer Worshippers Church</h2>
+            <p>Raising a Generation of Genuine Saints!</p>
+        </div>
+    </div>
+
+    <div class="menu-toggle" id="menu-toggle">
+        ☰
+    </div>
+
+    <nav id="navbar">
+        <ul>
+            <li><a href="#home">Home</a></li>
+            <li><a href="#about">About Us</a></li>
+            <li><a href="#branches">Branches</a></li>
+            <li><a href="#ministries">Ministries</a></li>
+            <li><a href="#sermons">Sermons</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+</header>
+<section id="home" class="hero">
+    <div class="hero-content">
+
+        <h4>WELCOME TO</h4>
+
+        <h1>
+            HOUSE OF PRAYER<br>
+            WORSHIPPERS CHURCH
+        </h1>
+
+        <div class="motto">
+            "Raising a Generation of Genuine Saints!"
+        </div>
+
+        <p>
+            We are a Christ-centered ministry devoted to prayer,
+            worship, discipleship, evangelism, and transforming lives
+            through the power of God's Word. Join us as we grow in faith,
+            serve in love, and raise a generation of genuine saints.
+        </p>
+
+        <div class="buttons">
+            <a href="#contact" class="btn btn-primary">
+    Join Us This Sunday
+</a>
+           <a href="#branches" class="btn btn-secondary">
+    Find a Branch
+</a>
+        </div>
+
+    </div>
+
+</section>
+<!-- WHO WE ARE -->
+
+<section id="about" class="about">
+    <div class="section-header">
+        <span>WHO WE ARE</span>
+        <h2>About House of Prayer Worshippers Church</h2>
+    </div>
+
+    <div class="about-content">
+
+        <div class="about-text">
+
+            <p>
+               House of Prayer Worshippers Church is a Christ
+-centered ministry committed to raising believers who live holy,
+ authentic, and Spirit-led lives. We are a growing family of 
+faith passionate about worship, prayer, discipleship, 
+and the teaching of God's Word.
+            </p>
+
+            <!-- OUR HISTORY -->
+
+<section class="history">
+
+    <div class="section-header">
+        <span>OUR JOURNEY</span>
+        <h2>Our History</h2>
+    </div>
+
+    <div class="history-content">
+
+        <p>
+            Founded over 10 years ago by Bishop Joseph Mwangi Njekehu,
+            House of Prayer Worshippers Church was established with a vision
+            to build a strong spiritual foundation in the lives of believers
+            and to raise a generation rooted in faith, truth, and holiness.
+        </p>
+
+        <p>
+            What began as a humble ministry has grown into a vibrant church
+            with multiple branches across Kenya, impacting lives through
+            biblical teaching, fervent prayer, worship, evangelism, and
+            community outreach.
+        </p>
+
+        <p>
+            Our headquarters is located in Kaharo, Kirinyaga County,
+            along the Kagumo–Baricho Road, serving as the heart of a
+            ministry dedicated to spreading the Gospel and transforming
+            lives through the power of Jesus Christ.
+        </p>
+
+    </div>
+
+</section>
+
+            <a href="#" class="learn-more-btn">Learn More</a>
+
+        </div>
+
+        <div class="about-image">
+
+            <img src="images/church-family.png"
+                 alt="Church Congregation">
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- VISION & MISSION -->
+
+<section class="vision-mission">
+
+    <div class="section-header">
+        <span>OUR PURPOSE</span>
+        <h2>Vision & Mission</h2>
+    </div>
+
+    <div class="cards">
+
+        <div class="card">
+
+            <div class="icon">👁️</div>
+
+            <h3>Our Vision</h3>
+
+            <p>
+                To raise a generation of genuine saints who walk in holiness, truth, and the power of the Holy Spirit.
+            </p>
+
+        </div>
+
+        <div class="card">
+
+            <div class="icon">🎯</div>
+
+            <h3>Our Mission</h3>
+
+            <p>
+                To disciple believers through prayer, worship, sound biblical teaching, evangelism, and compassionate service while advancing the Kingdom of God across Kenya and beyond.
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- OUR BRANCHES SECTION -->
+<section id="branches" class="branches">
+
+    <div class="section-header">
+        <span>FIND A BRANCH</span>
+        <h2>Our Branches Across Kenya</h2>
+
+        <p class="section-description">
+            House of Prayer Worshippers Church continues to spread the Gospel
+            across Kenya through its growing network of branches, serving
+            communities through prayer, worship, discipleship, and outreach.
+        </p>
+    </div>
+
+    <!-- Headquarters -->
+
+    <div class="headquarters-card">
+
+        <div class="hq-badge">Headquarters</div>
+
+        <h3>Kaharo, Kirinyaga County</h3>
+
+        <p>
+            Located along Kagumo–Baricho Road, our headquarters serves as the
+            spiritual and administrative center of the ministry under the
+            leadership of Bishop Joseph Mwangi Njekehu.
+        </p>
+
+        <div class="location">
+            📍 Kagumo–Baricho Road, Kaharo, Kirinyaga County
+        </div>
+
+    </div>
+
+    <!-- Regions -->
+
+    <div class="regions-grid">
+
+        <div class="region-card">
+            <h3>Kirinyaga Central Region</h3>
+
+            <ul>
+                <li>Kandongu</li>
+                <li>Kiamwaki</li>
+                <li>Gatugura</li>
+                <li>Kamuiru</li>
+                <li>Makutano</li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <h3>Kirinyaga South Region</h3>
+
+            <ul>
+                <li>Kiriko</li>
+                <li>Redsoil</li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <h3>Nairobi Region</h3>
+
+            <ul>
+                <li>Malaba</li>
+                <li>Pangani</li>
+                <li>Huruma</li>
+                <li>Githurai 40</li>
+                <li>Utawala</li>
+                <li>Juja Farm</li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <h3>Embu Region</h3>
+
+            <ul>
+                <li>Manyata</li>
+                <li>Kairuri</li>
+            </ul>
+        </div>
+
+        <div class="region-card">
+            <h3>Nyeri Region</h3>
+
+            <ul>
+                <li>Endarasha</li>
+            </ul>
+        </div>
+
+    </div>
+<!-- FOUNDER SECTION -->
+
+<section class="founder">
+
+    <div class="section-header">
+        <span>OUR LEADERSHIP</span>
+        <h2>Meet Our Founder & Presiding Bishop</h2>
+    </div>
+
+    <div class="founder-container">
+
+        <div class="founder-image">
+            <img src="images/bishop-joseph.png"
+                 alt="Bishop Joseph Mwangi Njekehu">
+        </div>
+
+        <div class="founder-content">
+
+            <h3>Bishop Joseph Mwangi Njekehu</h3>
+
+            <h4>Founder & Presiding Bishop</h4>
+
+            <p>
+                Bishop Joseph Mwangi Njekehu is the Founder and Presiding
+                Bishop of House of Prayer Worshippers Ministries. He is a
+                dedicated servant of God with a strong calling in biblical
+                teaching, discipleship, leadership development, and
+                ministerial training.
+            </p>
+
+            <p>
+                Through years of ministry, theological training, and church
+                leadership, he has remained committed to raising believers
+                who are rooted in prayer, holiness, sound doctrine, and the
+                transforming power of God's Word.
+            </p>
+
+            <blockquote>
+                "To raise a generation of genuine saints who walk in holiness,
+                truth, and the power of the Holy Spirit."
+            </blockquote>
+
+            <a href="bishop-joseph.html" class="bishop-btn">
+    Read Full Biography
+</a>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- LEADERSHIP TEAM -->
+
+<section class="leadership">
+
+    <div class="section-header">
+        <span>LEADERSHIP TEAM</span>
+        <h2>Church Leadership</h2>
+
+        <p class="section-description">
+            Our leadership team is committed to serving God's people,
+            advancing the Gospel, and supporting the vision of House of
+            Prayer Worshippers Church.
+        </p>
+    </div>
+
+    <div class="leadership-grid">
+
+        <!-- Founder -->
+
+        <div class="leader-card">
+
+            <h3>Bishop Joseph Mwangi Njekehu</h3>
+
+            <p class="position">
+                Founder & Presiding Bishop
+            </p>
+
+            <p class="leader-contact">
+                📞 0727 022 931
+            </p>
+
+        </div>
+
+        <!-- Deputy Bishop -->
+
+        <div class="leader-card">
+
+            <h3>Rev. Hillary Ngahu</h3>
+
+            <p class="position">
+                Deputy Bishop
+            </p>
+
+            <p>
+                Secretary General
+            </p>
+
+            <p>
+                General Overseer – Nairobi Region
+            </p>
+
+            <p class="leader-contact">
+                📞 +254 722 249255
+            </p>
+
+        </div>
+
+        <!-- Treasurer -->
+
+        <div class="leader-card">
+
+            <h3>Rev. Jane Wanjiru Njau</h3>
+
+            <p class="position">
+                National Treasurer
+            </p>
+
+            <p>
+                Overseer – Kirinyaga Central Region
+            </p>
+
+            <p class="leader-contact">
+                📞 0790 128683
+            </p>
+
+        </div>
+
+        <!-- Overseer -->
+
+        <div class="leader-card">
+
+            <h3>Rev. Monica Mwongeli</h3>
+
+            <p class="position">
+                Regional Overseer
+            </p>
+
+            <p>
+                Kirinyaga South Region
+            </p>
+
+        </div>
+
+    </div>
+
+</section>
+<!-- MINISTRIES SECTION -->
+
+<section id="ministries" class="ministries">
+
+    <div class="section-header">
+        <span>OUR MINISTRIES</span>
+        <h2>Growing Together in Faith, Service & Purpose</h2>
+
+        <p class="section-description">
+            Through our various ministries, we nurture spiritual growth,
+            discipleship, fellowship, worship, and service to God's people.
+        </p>
+    </div>
+
+    <div class="ministries-grid">
+
+        <div class="ministry-card">
+            <div class="ministry-icon">🧑‍🎓</div>
+            <h3>Youth Ministry</h3>
+            <p>
+                Empowering young people to live for Christ and impact their generation.
+            </p>
+        </div>
+
+        <div class="ministry-card">
+            <div class="ministry-icon">👥</div>
+            <h3>Teens Ministry</h3>
+            <p>
+                Guiding teenagers in their spiritual growth and identity in Christ.
+            </p>
+        </div>
+
+        <div class="ministry-card">
+            <div class="ministry-icon">👧</div>
+            <h3>Sunday School</h3>
+            <p>
+                Teaching children the Word of God in a fun and engaging way.
+            </p>
+        </div>
+
+        <div class="ministry-card">
+            <div class="ministry-icon">🎵</div>
+            <h3>Worship & Praise Team</h3>
+            <p>
+                Leading the church into God's presence through worship and praise.
+            </p>
+        </div>
+
+        <div class="ministry-card">
+            <div class="ministry-icon">🌍</div>
+            <h3>Evangelism & Outreach</h3>
+            <p>
+                Reaching communities with the Gospel through missions and outreach programs.
+            </p>
+        </div>
+
+        <div class="ministry-card">
+            <div class="ministry-icon">🤝</div>
+            <h3>Men & Women Fellowships</h3>
+            <p>
+                Building strong families and spiritual growth through fellowship.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<!-- EVENTS SECTION -->
+
+<section class="events">
+
+    <div class="section-header">
+        <span>UPCOMING EVENTS</span>
+        <h2>Join Us In Fellowship & Worship</h2>
+    </div>
+
+    <div class="events-grid">
+
+        <div class="event-card">
+            <h3>Annual Youth Conference</h3>
+            <p class="event-date">📅 August Every Year</p>
+
+            <p>
+                A gathering of young people for worship, discipleship,
+                leadership training, and spiritual growth.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <h3>Annual Conference</h3>
+            <p class="event-date">📅 December - Kaharo Headquarters</p>
+
+            <p>
+                Bringing together believers from all branches for worship,
+                teaching, fellowship, and ministry impartation.
+            </p>
+        </div>
+
+        <div class="event-card">
+            <h3>Prayer Meetings</h3>
+            <p class="event-date">📅 Weekly Across Branches</p>
+
+            <p>
+                Regular prayer gatherings focused on spiritual growth,
+                intercession, and revival.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section id="sermons" class="sermons">
+
+    <div class="section-header">
+        <span>WORD OF GOD</span>
+        <h2>Recent Sermons</h2>
+    </div>
+
+    <div class="sermon-grid">
+
+        <div class="sermon-card">
+            <h3>Walking in Holiness</h3>
+            <p>
+                A message on living a life that pleases God and reflects Christ.
+            </p>
+        </div>
+
+        <div class="sermon-card">
+            <h3>The Power of Prayer</h3>
+            <p>
+                Understanding the importance of prayer in the life of every believer.
+            </p>
+        </div>
+
+        <div class="sermon-card">
+            <h3>Growing as a Disciple</h3>
+            <p>
+                Learning how to mature spiritually through God's Word.
+            </p>
+        </div>
+
+    </div>
+
+</section>
+<section class="social-media">
+
+    <div class="section-header">
+        <span>CONNECT WITH US</span>
+        <h2>Follow Our Ministry</h2>
+
+        <p>
+            Stay connected with House of Prayer Worshippers Church through
+            our official social media platforms.
+        </p>
+    </div>
+
+    <div class="social-buttons">
+
+        <a href="https://www.facebook.com/profile.php?id=61590852836436"
+           target="_blank"
+           class="facebook-btn">
+           📘 Follow Us on Facebook
+        </a>
+
+        <a href="https://wa.me/254722249255"
+           target="_blank"
+           class="whatsapp-btn">
+           💬 Chat With Us on WhatsApp
+        </a>
+
+    </div>
+
+</section>
+<!-- CONTACT SECTION -->
+
+<section id="contact" class="contact">
+
+    <div class="contact-info">
+
+        <h2>Contact Us</h2>
+
+        <p>
+            We'd love to hear from you. Reach out for prayer,
+            fellowship, ministry information, or general inquiries.
+        </p>
+
+        <div class="contact-item">
+            📍 Kaharo, Kirinyaga County
+        </div>
+
+        <div class="contact-item">
+            📞 Secretary General:
+            +254 722 249255
+        </div>
+
+        <div class="contact-item">
+            💬 WhatsApp:
+            <a href="https://wa.me/254722249255">
+                Chat With Us
+            </a>
+        </div>
+
+    </div>
+
+    <div class="contact-form">
+
+        <form>
+
+            <input
+                type="text"
+                placeholder="Full Name"
+                required
+            >
+
+            <input
+                type="email"
+                placeholder="Email Address"
+            >
+
+            <input
+                type="text"
+                placeholder="Phone Number"
+            >
+
+            <select required>
+                <option value="">
+                    Select Request Type
+                </option>
+                <option>
+                    Prayer Request
+                </option>
+                <option>
+                    General Inquiry
+                </option>
+                <option>
+                    Ministry Information
+                </option>
+            </select>
+
+            <textarea
+                rows="6"
+                placeholder="Your Message"
+                required>
+            </textarea>
+
+            <button type="submit">
+                Send Message
+            </button>
+
+        </form>
+
+    </div>
+
+</section>
+<section class="scripture">
+
+    <p>
+        "Until we all reach unity in the faith and in the knowledge
+        of the Son of God and become mature, attaining to the whole
+        measure of the fullness of Christ."
+    </p>
+
+    <span>— Ephesians 4:13</span>
+
+</section>
+<footer>
+
+    <div class="footer-logo">
+        House of Prayer Worshippers Church
+    </div>
+
+    <p>Raising a Generation of Genuine Saints</p>
+
+    <p>Headquarters: Kaharo, Kirinyaga County</p>
+
+    <p>
+        © 2026 House of Prayer Worshippers Church.
+        All Rights Reserved.
+    </p>
+
+</footer>
+</section>
+<script>
+
+const menuToggle = document.getElementById("menu-toggle");
+const navbar = document.getElementById("navbar");
+
+menuToggle.addEventListener("click", () => {
+    navbar.classList.toggle("active");
+});
+
+</script>
+<div class="floating-buttons">
+
+    <a href="https://wa.me/254722249255"
+       target="_blank"
+       class="float-whatsapp">
+       💬
+    </a>
+
+    <a href="https://www.facebook.com/profile.php?id=61590852836436"
+       target="_blank"
+       class="float-facebook">
+       📘
+    </a>
+
+</div>
+
+</body>
+</html>
