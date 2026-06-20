@@ -187,16 +187,21 @@ body{
 }
 
 .menu-toggle{
-    display:none;
+    display:block;
+    font-size:35px;
+    color:white;
+    cursor:pointer;
+    font-weight:bold;
 }
 /* RESPONSIVE */
 @media(max-width:900px){
 
     .menu-toggle{
         display:block;
-        font-size:30px;
+        font-size:35px;
         color:white;
         cursor:pointer;
+        font-weight:bold;
     }
 
     nav{
@@ -213,14 +218,22 @@ body{
     }
 
     nav ul{
+        display:flex;
         flex-direction:column;
         padding:20px;
     }
 
     nav ul li{
-        margin:10px 0;
+        margin:15px 0;
+        text-align:center;
     }
-}
+
+    nav ul li a{
+        color:white !important;
+        font-size:18px;
+        font-weight:bold;
+    }
+
     .logo-text h2{
         font-size:15px;
     }
@@ -233,7 +246,10 @@ body{
         width:45px;
         height:45px;
     }
+
 }
+
+/* Hide hamburger on desktop */
 .menu-toggle{
     display:none;
 }
