@@ -29,18 +29,26 @@ body{
 
 /* HEADER */
 header{
-    background:#ffffff;
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    z-index:1000;
+
+    background:linear-gradient(
+        135deg,
+        #0A3D91,
+        #1B56C4
+    );
+
     display:flex;
     justify-content:space-between;
     align-items:center;
-    padding:15px 8%;
-    box-shadow:0 2px 10px rgba(0,0,0,0.08);
-    position:fixed;
-    width:100%;
-    top:0;
-    z-index:1000;
-}
 
+    padding:12px 50px;
+
+    box-shadow:0 4px 15px rgba(0,0,0,.2);
+}
 .logo-area{
     display:flex;
     align-items:center;
@@ -61,13 +69,12 @@ header{
 }
 
 .logo-text h2{
-    color:#0A3D91;
-    font-size:1.3rem;
+    color:white;
+    font-size:1.2rem;
 }
 
 .logo-text p{
-    color:#D4AF37;
-    font-size:0.85rem;
+    color:#FFD700;
 }
 .logo-img{
     width:60px;
@@ -77,24 +84,26 @@ header{
 
 nav ul{
     display:flex;
+    align-items:center;
+    gap:25px;
     list-style:none;
-}
-
-nav ul li{
-    margin-left:25px;
+    margin:0;
+    padding:0;
 }
 
 nav ul li a{
+    color:white;
     text-decoration:none;
-    color:#0A3D91;
+    font-size:16px;
     font-weight:600;
-    transition:0.3s;
 }
 
 nav ul li a:hover{
-    color:#D4AF37;
+    color:#FFD700;
 }
-
+body{
+    padding-top:90px;
+}
 /* HERO SECTION */
 .hero{
     min-height:100vh;
@@ -177,30 +186,56 @@ nav ul li a:hover{
     color:#0A3D91;
 }
 
+.menu-toggle{
+    display:none;
+}
 /* RESPONSIVE */
 @media(max-width:900px){
 
-header{
-    flex-direction:column;
-    gap:15px;
-}
+    .menu-toggle{
+        display:block;
+        font-size:30px;
+        color:white;
+        cursor:pointer;
+    }
 
-.hero h1{
-    font-size:2.5rem;
-}
+    nav{
+        display:none;
+        position:absolute;
+        top:100%;
+        left:0;
+        width:100%;
+        background:#0A3D91;
+    }
 
-.logo-text h2{
-    font-size:1rem;
-}
+    nav.active{
+        display:block;
+    }
 
-nav ul{
-    flex-wrap:wrap;
-    justify-content:center;
-}
+    nav ul{
+        flex-direction:column;
+        padding:20px;
+    }
 
-nav ul li{
-    margin:8px;
+    nav ul li{
+        margin:10px 0;
+    }
 }
+    .logo-text h2{
+        font-size:15px;
+    }
+
+    .logo-text p{
+        font-size:11px;
+    }
+
+    .logo-img{
+        width:45px;
+        height:45px;
+    }
+}
+.menu-toggle{
+    display:none;
 }
 /* GENERAL SECTION HEADER */
 
@@ -866,43 +901,16 @@ footer p{
 .whatsapp-btn:hover{
     transform:translateY(-3px);
 }
-/* FLOATING BUTTONS */
+@media(max-width:600px){
 
-.floating-buttons{
-    position:fixed;
-    right:20px;
-    bottom:20px;
-    display:flex;
-    flex-direction:column;
-    gap:12px;
-    z-index:999;
-}
+    .logo-text h2{
+        font-size:13px;
+    }
 
-.float-whatsapp,
-.float-facebook{
-    width:60px;
-    height:60px;
-    border-radius:50%;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    text-decoration:none;
-    font-size:28px;
-    color:white;
-    box-shadow:0 5px 15px rgba(0,0,0,.2);
-}
+    .logo-text p{
+        display:none;
+    }
 
-.float-whatsapp{
-    background:#25D366;
-}
-
-.float-facebook{
-    background:#1877F2;
-}
-
-.float-whatsapp:hover,
-.float-facebook:hover{
-    transform:scale(1.1);
 }
 </style>
 </head>
@@ -912,7 +920,7 @@ footer p{
 <header>
 
     <div class="logo-area">
-        <img src="logo.png" alt="Church Logo" class="logo-img">
+        <img src="logo.png" class="logo-img">
 
         <div class="logo-text">
             <h2>House of Prayer Worshippers Church</h2>
@@ -925,15 +933,15 @@ footer p{
     </div>
 
     <nav id="navbar">
-        <ul>
-            <li><a href="#home">Home</a></li>
-            <li><a href="#about">About Us</a></li>
-            <li><a href="#branches">Branches</a></li>
-            <li><a href="#ministries">Ministries</a></li>
-            <li><a href="#sermons">Sermons</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
+    <ul>
+        <li><a href="#home">Home</a></li>
+        <li><a href="#about">About Us</a></li>
+        <li><a href="#branches">Branches</a></li>
+        <li><a href="#ministries">Ministries</a></li>
+        <li><a href="#sermons">Sermons</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
 
 </header>
 <section id="home" class="hero">
@@ -1582,7 +1590,7 @@ and the teaching of God's Word.
 
 </section>
 </section>
-    <footer>
+<footer>
 
     <div class="footer-logo">
         House of Prayer Worshippers Church
@@ -1598,6 +1606,7 @@ and the teaching of God's Word.
     </p>
 
 </footer>
+
 <script>
 
 const menuToggle = document.getElementById("menu-toggle");
@@ -1623,6 +1632,7 @@ menuToggle.addEventListener("click", () => {
     </a>
 
 </div>
+
 
 </body>
 </html>
