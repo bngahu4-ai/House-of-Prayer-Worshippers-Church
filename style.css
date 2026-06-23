@@ -702,3 +702,70 @@ blockquote{
     }
 
 }
+.footer-social a{
+    color:#FFD700;
+    text-decoration:none;
+    font-weight:bold;
+}
+
+.footer-social a:hover{
+    color:white;
+}
+body{
+    margin:0;
+    padding:0;
+}
+
+footer{
+    margin-bottom:0;
+}
+html{
+    overflow-x:hidden;
+}
+/* Floating WhatsApp */
+.whatsapp{
+    position:fixed;
+    bottom:20px;
+    right:20px;
+
+    width:60px;
+    height:60px;
+
+    background:#25D366;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+    text-decoration:none;
+
+    z-index:9999;
+}
+
+/* Floating Facebook */
+.facebook-float{
+    position:fixed;
+    bottom:90px; /* sits above WhatsApp */
+    right:20px;
+
+    width:60px;
+    height:60px;
+
+    background:#1877F2;
+    color:white;
+
+    border-radius:50%;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+
+    font-size:30px;
+    text-decoration:none;
+
+    z-index:9999;
+}
