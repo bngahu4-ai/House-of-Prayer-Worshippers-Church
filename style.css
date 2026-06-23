@@ -294,11 +294,20 @@ footer p{
 
     nav{
         display:none;
+
         position:absolute;
-        top:100%;
-        left:0;
-        width:100%;
-        background:#003C8F;
+        top:70px;
+        right:15px;
+
+        width:220px;
+
+        background:white;
+
+        border-radius:12px;
+
+        box-shadow:0 5px 20px rgba(0,0,0,.2);
+
+        z-index:1000;
     }
 
     nav.active{
@@ -307,14 +316,20 @@ footer p{
 
     nav ul{
         flex-direction:column;
-        text-align:center;
-        padding:20px;
+        padding:10px;
     }
 
     nav ul li{
-        margin:12px 0;
+        margin:10px 0;
+        text-align:left;
     }
 
+    nav ul li a{
+        color:#003C8F;
+        display:block;
+        padding:10px;
+    }
+}
     .hero h1{
         font-size:2rem;
     }
