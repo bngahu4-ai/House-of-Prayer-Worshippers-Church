@@ -649,3 +649,38 @@ blockquote{
     background:#FFD700;
     color:#003C8F;
 }
+.event-poster{
+    width:100%;
+    max-width:600px;
+    height:auto;
+    display:block;
+    margin:20px auto;
+    border-radius:15px;
+}
+.featured-event{
+    width:100%;
+    max-width:1000px;
+    margin:auto;
+    padding:20px;
+    text-align:center;
+}
+@media(max-width:768px){
+
+    .event-poster{
+        width:100%;
+        max-width:100%;
+    }
+
+    .featured-event h2{
+        font-size:1.8rem;
+    }
+
+    .featured-event h3{
+        font-size:1.2rem;
+    }
+
+    .featured-event p{
+        font-size:1rem;
+    }
+
+}
