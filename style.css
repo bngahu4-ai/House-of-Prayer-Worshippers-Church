@@ -784,3 +784,55 @@ html{
 
     z-index:9999;
 }
+/* BRANCHES SECTION */
+
+.branches{
+    padding:80px 5%;
+    text-align:center;
+    background:#f8f9fc;
+}
+
+.branch-summary{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:25px;
+    margin:40px 0;
+}
+
+.branch-box{
+    background:white;
+    padding:25px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,.08);
+    transition:.3s;
+}
+
+.branch-box:hover{
+    transform:translateY(-5px);
+}
+
+.branch-box h3{
+    color:#003C8F;
+    margin-bottom:10px;
+}
+
+.branch-box p{
+    color:#666;
+    font-size:1rem;
+}
+
+.btn{
+    display:inline-block;
+    background:#003C8F;
+    color:white;
+    padding:12px 30px;
+    border-radius:30px;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.btn:hover{
+    background:#FFD700;
+    color:#003C8F;
+}
