@@ -892,3 +892,7 @@ html{
     background:#FFD700;
     color:#003C8F;
 }
+.branches a.btn{
+    display:inline-block;
+    margin:30px auto 0;
+}
